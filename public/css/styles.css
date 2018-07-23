@@ -1,0 +1,25 @@
+.sentence {
+    font-size: 20px;
+}
+
+#userInput {
+    font-size: 20px;
+    height: 130px;
+    border: 3px solid black;
+}
+
+.disabledBox {
+    background: lightgray;
+}
+
+.icons {
+    vertical-align: middle;
+}
+
+.right {
+    border: 3px solid green !important;
+}
+
+.wrong {
+    border: 3px solid red !important;
+}

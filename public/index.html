@@ -3,22 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Typing Speed Game</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
-    <h1>Typing Speed Game</h1>
-    <p class="sentence">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam purus, semper eget hendrerit at, aliquam sed enim. Sed rhoncus massa sed urna ullamcorper, eu volutpat velit vulputate. Sed et imperdiet elit. Donec efficitur non quam sed blandit. Cras accumsan justo sed vehicula sagittis. Sed tortor urna, accumsan et elementum id, tempus id dui. Suspendisse potenti. Phasellus eget tortor euismod libero porta aliquet sed sit amet nulla. Aliquam erat volutpat. Nam ut lacus sed felis sollicitudin pretium.</p>
+    <div class="container">
+        <h1 class="center">Typing Speed Game</h1>
+        <p class="sentence center">This sentence has five words</p>
+    
+        <ul class="info center">
+            <li>
+                <i class="small material-icons icons">description</i>
+                <span id="numberOfWords">30</span> words
+            </li>
+            <li>
+                <i class="small material-icons icons">query_builder</i>                
+                <span id="timeLeft"></span> seconds
+            </li>
+        </ul>
+    
+        <textarea id="userInput" rows="6" cols ="40"></textarea>
+    
+        <div class="buttons">
+            <button class="btn-floating btn-large waves-effect waves-light red" id="restartButton"><i class="material-icons">restore</i>
+        </div>
 
-    <ul class="info">
-        <li><span id="numberOfWords">30</span> words</li>
-        <li><span id="timeLeft">3</span> seconds</li>
-    </ul>
-
-    <textarea id="userInput" rows="6" cols ="40"></textarea>
-
-    <ul>
-        <li><span id="typedCharacters">0</span> Characters</li>
-        <li><span id="typedWords">0</span> Words</li>
-    </ul>
+        <ul class="center">
+            <li><span id="typedCharacters">0</span> Characters</li>
+            <li><span id="typedWords">0</span> Words</li>
+        </ul>
+    
+    </div>
+    
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
