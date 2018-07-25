@@ -83,7 +83,17 @@ function syncScoreBoard() {
         score: scoreBoard
     }
 
-    $.post("http://localhost:3000/score",dataToInsert);
+    $.post("http://localhost:3000/score",dataToInsert, function() {
+        $('.tooltip').tooltipster('open').tooltipster('content', 'Successfully Syncronyzed');;
+    }).fail(function() {
+        $('.tooltip').tooltipster('open').tooltipster('content', 'Synchronization Failed');
+    })
+    
+    .always(function() {
+        setTimeout(function() {
+            $('.tooltip').tooltipster('close');
+        }, 2000);    
+    });
 }
 
 function updateScore() {
