@@ -12,9 +12,13 @@ $(function() {
     $('#scoreButton').click(showScoreBoard);
     $('#questionButton').click(randomSentence);
     $('#restartButton').click(startGame);
+    $('#syncButton').click(syncScoreBoard);
 
     // Starting game
     startGame();
+
+    // Update the scoreboard with the data from JSON file.
+    updateScore();
 
 
     
