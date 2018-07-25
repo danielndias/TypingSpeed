@@ -51,3 +51,9 @@ body {
 #syncButton {
     float: right;
 }
+
+.userSelect {
+    display: inline-block;
+    width: 20%;
+    vertical-align: middle;
+}

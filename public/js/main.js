@@ -20,7 +20,10 @@ $(function() {
     // Update the scoreboard with the data from JSON file.
     updateScore();
 
-
+    $('.userSelect').selectize({
+        create: true,
+        sortField: 'text'
+    });
     
 })
 

@@ -1,7 +1,7 @@
 function insertScore() {
     let scoreBoard = $('.scoreBoard').find('tbody');
     
-    var username = 'Daniel';
+    var username = $('.userSelect').val();
     var wordCount = $('#typedWords').text();
 
     let newScore = createLine(username, wordCount)
