@@ -1,11 +1,16 @@
+body {
+    overflow: scroll;
+}
+
 .sentence {
     font-size: 20px;
 }
 
 #userInput {
     font-size: 20px;
-    height: 130px;
+    height: 100px;
     border: 3px solid black;
+    margin-bottom: 15px;
 }
 
 .disabledBox {
@@ -22,4 +27,23 @@
 
 .wrong {
     border: 3px solid red !important;
+}
+
+.scoreBoard {
+    display: none;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+#spinner {
+    display: none;
+}
+
+#sentenceId {
+    /* background: #00bcd4; */
+    width: 50px;
+    text-align: center;
 }
