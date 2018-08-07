@@ -42,7 +42,7 @@ function updateTypedInfo() {
 
     // Get the content from textarea
     var typed = userInputField.val();
-
+    console.log(typed)
     // Get the number of characters typed
     var typedCharacters = typed.length;
     $('#typedCharacters').text(typedCharacters);
@@ -110,7 +110,9 @@ function finishGame() {
     $('#restartButton').attr("disabled", false);
 
     // Insert the player score into the scoreboard
-    insertScore();
+    if (checkStatus(userInputField.val())) {
+        insertScore();
+    }
 }
 
 /**
@@ -124,5 +126,7 @@ function checkStatus(typed) {
 
     userInputField.toggleClass("right", isRight);
     userInputField.toggleClass("wrong", !isRight);
+
+    return isRight;
 }
 
